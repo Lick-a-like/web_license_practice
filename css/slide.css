@@ -1,0 +1,26 @@
+*{margin:0; padding: 0;}
+li{ list-style: none;}
+a{ text-decoration: none; color: #222}
+.container {width: 1200px; margin: 0 auto;}
+/* 슬라이드 */
+#mainBanner{
+    overflow: hidden;
+}
+
+#mainBanner ul{
+    width: 10000px;
+    display: flex;
+}
+
+#mainBanner li{
+    float: left;
+
+}
+
+#mainBanner li a{
+    display: block;
+}
+
+#mainBanner li img{
+    display: block;
+}
