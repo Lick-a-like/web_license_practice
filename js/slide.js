@@ -1,22 +1,53 @@
+// 유형 1
 $(document).ready(function(){
+    var objTop = $("#topBanner ul")
 
     setInterval(function(){
+        objTop.animate({
+            "marginTop" : "-="+350
+        }, 400, function(){
+                objTop.find('li').eq(0).appendTo(objTop);
+                objTop.css({"marginTop" : 0});
+            });
+    }, 3000);
+});
 
-        $('#mainBanner ul').animate(
-            {
+// 유형 2
+$(document).ready(function(){
+    var objLeft = $("#leftBanner ul")
+
+    setInterval(function(){
+        objLeft.animate({
             "marginLeft" : "-="+1200
-            },
-            400,
-            function(){
-                $("#mainBanner li").eq(0).appendTo("mainBanner ul");
-                //첫번째 li를 막내자리로 옮겨라
-                $("mainBanner ul").css("margin-left",0);
+        }, 400, function(){
+                objLeft.find('li').eq(0).appendTo(objLeft);
+                objLeft.css({"marginLeft" : 0});
+            });
+    }, 3000);
+});
 
+// 유형 3 ㅠㅠ
+$(document).ready(function(){
+    var objRight = $("#rightBanner ul")
+
+    setInterval(function(){
+        objRight.animate({
+            "marginRight" : "+="-1200
+        }, 400, function(){
+                objRight.find('li').eq(-1).uppendTo(objRight);
+                objRight.css({"marginLeft" : 0});
+            });
+    }, 3000);
+});
+
+// 유형 4
+$(document).ready(function(){
+    var objFade = $("#fadeBanner ul")
+    var count = 0;
     
-            }); // animate
-
-    }, 3000); //3초마다 주기적으로 앞의 함수 실행
-
-
-
-}); // ready
+    setInterval(function(){
+        count++;
+        count = count % 3;
+        objFade.find('li').eq(count).addClass('on').siblings().removeClass('on');
+    }, 3000);
+});

@@ -2,25 +2,28 @@
 li{ list-style: none;}
 a{ text-decoration: none; color: #222}
 .container {width: 1200px; margin: 0 auto;}
+
 /* 슬라이드 */
-#mainBanner{
+#topBanner, #leftBanner, #fadebanner{
     overflow: hidden;
+    height:350px;
 }
 
-#mainBanner ul{
-    width: 10000px;
+p { text-align: center; font-size: 50px; margin-top: 1em;}
+/* li img, li a {display: block;} */
+li {font-size: 0;}
+
+#leftBanner ul{
+    display: flex;
+    width: 100000px;
+}
+
+#rightBanner ul{
+    overflow: hidden;
     display: flex;
 }
 
-#mainBanner li{
-    float: left;
-
-}
-
-#mainBanner li a{
-    display: block;
-}
-
-#mainBanner li img{
-    display: block;
-}
+#fadeBanner {position: relative;}
+#fadeBanner li {position: absolute; left: 0; top: 0;
+                opacity: 0; visibility: hidden; transition: 0.6s;}
+#fadeBanner li.on{z-index: 1; opacity: 1; visibility: visible;}
