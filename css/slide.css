@@ -60,7 +60,7 @@ li {font-size: 0;}
 #tab .tabBox ul{ 
     position: absolute; top:35px; left:0; bottom:0; width:100%;        
 }
-.galleryBox ul{ display: none; }
+#tab .galleryBox ul{ display: none; }
 #tab  h2{ padding: 0 15px;}
 
 .galleryBox ul li a{ display: block; background-color: #ccc;}
