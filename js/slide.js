@@ -32,10 +32,10 @@ $(document).ready(function(){
 
     setInterval(function(){
         objRight.animate({
-            "marginRight" : "+="-1200
+            "marginLeft" : "+="+1200
         }, 400, function(){
-                objRight.find('li').eq(-1).uppendTo(objRight);
-                objRight.css({"marginLeft" : 0});
+                objRight.find('li').eq(-1).prependTo(objRight);
+                objRight.css({"marginRight" : "-="+1200});
             });
     }, 3000);
 });
@@ -50,4 +50,10 @@ $(document).ready(function(){
         count = count % 3;
         objFade.find('li').eq(count).addClass('on').siblings().removeClass('on');
     }, 3000);
+});
+
+$(document).ready(function(){
+    $(".tabBox h2").click(function(){
+        $(this).parent().addClass('on').siblings().removeClass('on');
+    });
 });
