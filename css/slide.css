@@ -27,3 +27,52 @@ li {font-size: 0;}
 #fadeBanner li {position: absolute; left: 0; top: 0;
                 opacity: 0; visibility: hidden; transition: 0.6s;}
 #fadeBanner li.on{z-index: 1; opacity: 1; visibility: visible;}
+
+
+
+
+.sliceDiv, #tab{ 
+    display: flex; border:1px solid #222; height:200px;
+    /*자식들을 옆으로 나열하겠다.
+    자식중의 abs가 있으므로 부모 높이 세팅완료
+    */
+       }
+.sliceDiv a,
+#tab a{ font-size: 1rem; /* 
+    반드시 rem이여야한다. 
+    부모 폰트 사이즈가 지금 0이므로  em으로 변화주기 불가*/
+}
+.sliceDiv > div,
+#tab > div,
+.galleryBox ul li{ 
+    width: calc(33.333% - 20px); 
+    margin: 10px; 
+    /*부모가 flex 라서 옆으로 나열되는 객체 3개라서 3등분하는데 
+    여백필요해서 calc로 여백빼주고 그 빼준 만큼 좌우여백으로 가운데 정렬로
+    보이도록 함
+    */
+}
+.galleryBox ul{ display: flex;}
+#tab .tabBox{
+     display: flex;
+     position: relative;
+}
+#tab .tabBox ul{ 
+    position: absolute; top:35px; left:0; bottom:0; width:100%;        
+}
+.galleryBox ul{ display: none; }
+#tab  h2{ padding: 0 15px;}
+
+.galleryBox ul li a{ display: block; background-color: #ccc;}
+.imgbanner{ background-color: #ccc;}
+#tab ul,
+.sliceDiv ul{ border:1px solid #222; }
+
+/* .noticeBox ul {border: 3px solid #222;}
+.sliceDiv .galleryBox ul {
+    border: 3px solid #222;
+    height: 2rem;}
+.sliceDiv .galleryBox a {background-color: gray;}
+.imgbanner {background-color: gray;}
+#tab .galleryBox li {display: none;} */
+
